@@ -1,33 +1,20 @@
-// const element = document.createElement('h1');
-// element.innerText = 'Hello, Platzi Badges!';
-
-// const container = document.getElementById('app');
-
-// container.appendChild(element);
-
 import React from 'react';
 import ReactDOM from 'react-dom';
+import 'bootstrap/dist/css/bootstrap.css';
 
-// const element = <h1>Hello, Platzi Badges!</h1>;
-// const element = React.createElement('a', {href:'https://platzi.com'}, 'Ir a Platzi');
-// const name = 'Rodolfo';
-// const element = React.createElement(
-//     'h1',
-//     {},
-//     `Hola Soy ${name}`
-// );
-
-// const sum = (num1, num2) => num1 + num2;
-// const jsx = <h1>Hola soy, {undefined}</h1>
-
-const jsx = (<div>
-    <h1>
-        Hola, soy Jhonatan
-    </h1>
-    <p>Soy ingeniero de software</p>
-</div>);
+import './global.css';
+import Badge from './components/Badge';
 
 const container = document.getElementById('app');
 
 // ReactDOM.render(__qué__, __dónde__);
-ReactDOM.render(jsx, container);
+ReactDOM.render(
+    <Badge
+        firstName="Jhonatan" 
+        lastName="Escalante" 
+        avatarUrl="https://avatars2.githubusercontent.com/u/17649477?s=400&u=c01b57465ad5b987201364705de4a5b2f23a3f36&v=4"
+        jobTitle="Frontend Engineer" 
+        twitter="jhogakuse"
+    />, 
+    container
+);
