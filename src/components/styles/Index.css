@@ -1,0 +1,41 @@
+.Index_background {
+    width: 100%;
+    padding: 2rem 0;
+    background: url('../../images/stars.svg'), #1B1B25;
+    background-repeat: repeat;
+    margin-bottom: 1rem;
+    color: #ffffff;
+}
+
+.Index_background>.container {
+    width: 100%;
+    max-width: 80%;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.Left_section{
+    margin-right: 1rem;
+}
+
+.Left_section>.Left_section_title{
+    font-weight: bold;
+    font-size: x-large;
+}
+
+.LogoConfig {
+    width: 80%;
+    margin-bottom: 1rem;
+}
+
+.Astronautas {
+    width: 100%;
+}
+
+.Start_now{
+    width: 100%;
+    max-width: 80%;
+    margin: 0 auto;
+    font-weight: bold;
+    font-size: small;
+}

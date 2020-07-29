@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 
-import './styles/Badge.css'
+import './styles/BadgesList.css'
+
+import BadgesListItem from './BadgesListItem'
 
 class BadgesList extends Component{
     render(){
@@ -9,16 +11,7 @@ class BadgesList extends Component{
                 {this.props.badges.map((badge) => {
                     return (
                         <li key={badge.id}>
-                            <div className="badge_section-name">
-                                <img className="badge_avatar" src={badge.avatarUrl} alt={`${badge.firstName}_${badge.lastName}`} />
-                                <p>
-                                    {badge.firstName} {badge.lastName}
-                                    <br/>
-                                    @{badge.twitter}
-                                    <br/>
-                                    {badge.jobTitle}
-                                </p>
-                            </div>
+                            <BadgesListItem badge={badge} />
                         </li> 
                     )
                 })}
