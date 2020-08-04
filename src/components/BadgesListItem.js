@@ -8,18 +8,18 @@ class BadgesListItem extends Component {
             <div className="BadgesListItem">
                 <img
                 className="BadgesListItem__avatar"
-                src={this.props.badge.avatarUrl}
-                alt={`${this.props.badge.firstName} ${this.props.badge.lastName}`}
+                src={this.props.badge.image}
+                alt={`${this.props.badge.name}`}
                 />
                 
                 <div>
                     <strong>
-                        {this.props.badge.firstName} {this.props.badge.lastName}
+                        {this.props.badge.name}
                     </strong>
                     <br />
-                    @{this.props.badge.twitter}
+                    @{this.props.badge.status}
                     <br />
-                    {this.props.badge.jobTitle}
+                    {this.props.badge.species}
                 </div>
             </div>
         );
