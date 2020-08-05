@@ -24,6 +24,7 @@ async function callApi(endpoint, options = {}) {
 const api = {
   badges: {
     list() {
+      // throw new Error("DB access was denied");
       return callApi('/badges');
     },
     create(badge) {
