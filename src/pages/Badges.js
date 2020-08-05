@@ -130,7 +130,7 @@ class Badges extends React.Component {
                     this.state.loading && (
                         <div className="Badges__list">
                             <div className="Badges__container">
-                                Cargando ...
+                                Loading ...
                             </div>
                         </div>
                     )
