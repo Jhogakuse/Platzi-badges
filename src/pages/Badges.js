@@ -28,6 +28,8 @@ class Badges extends React.Component {
         console.log('3. componentDidMount()')
 
         this.fetchCharacters()
+
+        this.intervalId = setInterval(this.fetchCharacters, 5000);
     }
 
     fetchCharacters = async () => {
@@ -58,13 +60,13 @@ class Badges extends React.Component {
     componentWillUnmount() {
         console.log('6. componentWillUnmount')
 
-        clearTimeout(this.timeoutId)
+        clearInterval(this.intervalId)
     }
     
     render() {
         console.log('2/4. render()')
 
-        if (this.state.loading) {
+        if (this.state.loading === true && this.state.data.length === 0) {
             return (
                 <div className="Badges__list">
                     <div className="Badges__container">
@@ -104,17 +106,6 @@ class Badges extends React.Component {
                         <BadgesList badges={this.state.data}/>
                     </div>
                 </div>
-                
-                
-                {/* {
-                    !this.state.loading && (
-                        <div className="Badges__container">
-                            <div className="Badges__buttons">
-                                <button onClick={() => this.fetchCharacters()} className="btn btn-primary">Load More</button>
-                            </div>
-                        </div>
-                    )
-                } */}
             </React.Fragment>
         );
     }
