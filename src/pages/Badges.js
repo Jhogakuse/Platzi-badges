@@ -88,7 +88,7 @@ class Badges extends React.Component {
                 <div className="Badges">
                     <div className="Badges__hero">
                         <div className="Badges__container">
-                            <img className="Badges_conf-logo" src={confLogo} alt="Conf Logo" />
+                            <img className="Badges_conf-logo" src={confLogo} alt="Logo de la conferencia" />
                         </div>
                     </div>
                 </div>
